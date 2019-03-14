@@ -1,6 +1,6 @@
 "use strict";
-var assert = require("assert");
 
+var assert = require("assert");
 exports["simple"] = function() {
 	var logger = require('../').console({
 		transport : function(data) {
@@ -101,7 +101,7 @@ exports["custom format"] = function() {
 		          {
 		        	  warn : "warn:{{message}}",
 		        	  error : "error:{{message}}",
-		          }	
+		          }
 		],
 		transport : function(data) {
 			console.log(data.output);
@@ -124,7 +124,7 @@ exports["custom filter"] = function() {
 		          {
 		        	  warn : "warn:{{message}}",
 		        	  error : "error:{{message}}",
-		          }	
+		          }
 		],
 		filters:[
 		colors.underline,
@@ -303,4 +303,3 @@ exports["simple"] = function() {
 	assert.equal(o['line'], 300);
 	assert.equal(o['level'], 0);
 }
-
